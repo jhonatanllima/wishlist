@@ -6,7 +6,7 @@ module.exports = function (plop) {
       {
         type: 'input',
         name: 'name',
-        message: 'controller name please',
+        message: 'component name please',
       },
     ],
     actions: [
