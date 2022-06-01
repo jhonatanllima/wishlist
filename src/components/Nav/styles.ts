@@ -11,7 +11,7 @@ export const Container = styled.nav`
     border: none;
     padding: 1rem;
     height: 3.5rem;
-    border-radius: 4px;
+    border-radius: 2px;
     margin-top: 1.5rem;
   }
 `;
