@@ -1,3 +1,7 @@
+import Link from 'next/link';
+
+import { AiOutlineArrowLeft } from 'react-icons/ai';
+
 import { IoLocationSharp } from 'react-icons/io5';
 import { FaHeart, FaPhoneAlt } from 'react-icons/fa';
 
@@ -27,7 +31,15 @@ export function Header() {
   return (
     <S.Container>
       <S.Wrapper>
-        <h1>MagaNets</h1>
+        <S.WrapperLogo>
+          <a>
+            <Link href="/">
+              <AiOutlineArrowLeft size={24} color="#fff" />
+            </Link>
+          </a>
+
+          <h1>MagaNets</h1>
+        </S.WrapperLogo>
 
         <Nav menuItems={menuItems} />
       </S.Wrapper>

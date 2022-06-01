@@ -33,3 +33,19 @@ export const Wrapper = styled.div`
     flex-direction: column;
   }
 `;
+
+export const WrapperLogo = styled.div`
+  gap: 0.5rem;
+  display: flex;
+  flex-direction: column;
+
+  margin-top: -3rem;
+
+  a {
+    svg {
+      :hover {
+        cursor: pointer;
+      }
+    }
+  }
+`;
