@@ -1,26 +1,37 @@
-import { IoLocationSharp } from 'react-icons/io5';
-import { FaHeart, FaPhoneAlt } from 'react-icons/fa';
+import Link from 'next/link';
+import { ReactNode } from 'react';
 
 import * as S from './styles';
 
-export function Nav() {
+type menuItems = {
+  link?: string;
+  title: string;
+  icon: ReactNode;
+};
+
+interface NavProps {
+  menuItems: menuItems[];
+}
+
+export function Nav({ menuItems }: NavProps) {
   return (
     <S.Container>
       <S.MenuItems>
-        <li>
-          <IoLocationSharp />
-          Cidade: São Paulo
-        </li>
-
-        <li>
-          <FaPhoneAlt />
-          Central de atendimento
-        </li>
-
-        <li>
-          <FaHeart />
-          Lista de desejos
-        </li>
+        {menuItems.map((itemMenu, index) => (
+          <>
+            {itemMenu.link ? (
+              <a key={index}>
+                {itemMenu.icon}
+                <Link href={itemMenu.link}>{itemMenu.title}</Link>
+              </a>
+            ) : (
+              <li key={index}>
+                {itemMenu.icon}
+                {itemMenu.title}
+              </li>
+            )}
+          </>
+        ))}
       </S.MenuItems>
 
       <input

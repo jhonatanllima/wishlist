@@ -14,6 +14,12 @@ export const Container = styled.nav`
     border-radius: 2px;
     margin-top: 1.5rem;
   }
+
+  a {
+    :hover {
+      cursor: pointer;
+    }
+  }
 `;
 
 export const MenuItems = styled.ul`
@@ -29,6 +35,20 @@ export const MenuItems = styled.ul`
   font-weight: bold;
   font-size: 1.6rem;
   color: ${colors.white};
+
+  a {
+    display: flex;
+    align-items: center;
+
+    font-style: none;
+    font-size: 1.6rem;
+    text-decoration: none;
+    color: ${colors.white};
+
+    svg {
+      margin-right: 0.5rem;
+    }
+  }
 
   li {
     display: flex;
