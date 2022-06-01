@@ -1,14 +1,14 @@
 import * as S from './styles';
 
+import { Nav } from '~/components';
+
 export function Header() {
   return (
     <S.Container>
       <S.Wrapper>
         <h1>MagaNets</h1>
 
-        <S.Nav>
-          <h1>nav</h1>
-        </S.Nav>
+        <Nav />
       </S.Wrapper>
     </S.Container>
   );

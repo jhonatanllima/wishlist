@@ -1,14 +1,14 @@
 import { render, screen } from '@testing-library/react';
 
-import { Header } from '.';
+import { Nav } from '.';
 
-describe('<Header />', () => {
+describe('< Nav /> ', () => {
   it('should render the heading', () => {
-    const { container } = render(<Header />);
+    const { container } = render(<Nav />);
 
     expect(
       screen.getByRole('heading', {
-        name: /MagaNets/i,
+        name: /Nav/i,
       })
     ).toBeInTheDocument();
 
