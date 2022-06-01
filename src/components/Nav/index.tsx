@@ -22,6 +22,12 @@ export function Nav() {
           Lista de desejos
         </li>
       </S.MenuItems>
+
+      <input
+        type="text"
+        placeholder="Buscar"
+        onChange={(e) => console.log(e.target.value)}
+      />
     </S.Container>
   );
 }

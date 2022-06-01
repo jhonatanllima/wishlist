@@ -5,6 +5,15 @@ import { colors } from '~/styles/colors';
 export const Container = styled.nav`
   width: 100%;
   height: 100%;
+
+  input {
+    width: 100%;
+    border: none;
+    padding: 1rem;
+    height: 3.5rem;
+    border-radius: 4px;
+    margin-top: 1.5rem;
+  }
 `;
 
 export const MenuItems = styled.ul`
