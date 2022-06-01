@@ -7,4 +7,19 @@ export default {
   component: BreadCrumb,
 } as Meta;
 
-export const Basic: Story = (args) => <BreadCrumb />;
+const breadCrumbItems = [
+  {
+    title: 'Home',
+    separator: '>',
+    link: '/',
+  },
+
+  {
+    title: 'Favoritos',
+    link: '/favoritos',
+  },
+];
+
+export const Basic: Story = (args) => (
+  <BreadCrumb breadCrumbItems={breadCrumbItems} />
+);
