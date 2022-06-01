@@ -32,11 +32,11 @@ export function Header() {
     <S.Container>
       <S.Wrapper>
         <S.WrapperLogo>
-          <a>
-            <Link href="/">
+          <Link href="/">
+            <a>
               <AiOutlineArrowLeft size={24} color="#fff" />
-            </Link>
-          </a>
+            </a>
+          </Link>
 
           <h1>MagaNets</h1>
         </S.WrapperLogo>

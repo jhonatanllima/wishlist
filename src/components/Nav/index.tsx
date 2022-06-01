@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { ReactNode } from 'react';
+import { ReactNode, Fragment } from 'react';
 
 import * as S from './styles';
 
@@ -18,19 +18,21 @@ export function Nav({ menuItems }: NavProps) {
     <S.Container>
       <S.MenuItems>
         {menuItems.map((itemMenu, index) => (
-          <>
+          <Fragment key={index}>
             {itemMenu.link ? (
-              <a key={index}>
-                {itemMenu.icon}
-                <Link href={itemMenu.link}>{itemMenu.title}</Link>
-              </a>
+              <Link href={itemMenu.link}>
+                <a>
+                  {itemMenu.icon}
+                  {itemMenu.title}
+                </a>
+              </Link>
             ) : (
-              <li key={index}>
+              <li>
                 {itemMenu.icon}
                 {itemMenu.title}
               </li>
             )}
-          </>
+          </Fragment>
         ))}
       </S.MenuItems>
 

@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const Container = styled.header`
+export const Container = styled.main`
   width: 100%;
   min-height: calc(100vh - 15rem);
 
@@ -11,8 +11,10 @@ export const Container = styled.header`
 export const Wrapper = styled.div`
   width: 100%;
   min-height: 100%;
-  padding: 1rem;
+  padding: 2rem 1rem;
   max-width: 140rem;
 
-  background: #e9e9e9;
+  gap: 2rem;
+  display: flex;
+  flex-direction: column;
 `;
