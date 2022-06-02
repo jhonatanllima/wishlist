@@ -1,8 +1,10 @@
 import * as S from '~/styles/pages/favorites.styles';
 
-import { BreadCrumb } from '~/components';
+import { BreadCrumb, ProductCard, RemoveFavoriteButton } from '~/components';
 
 export default function Favorites() {
+  const mockProducts = Array.from({ length: 12 });
+
   const breadCrumbItems = [
     {
       title: 'Home',
@@ -21,7 +23,17 @@ export default function Favorites() {
       <S.Wrapper>
         <BreadCrumb breadCrumbItems={breadCrumbItems} />
 
-        <h1>Favoritos</h1>
+        <S.WrapperProducts>
+          {mockProducts.map((_, index) => (
+            <ProductCard
+              key={index}
+              price="R$ 400,00"
+              title="Roupa de Adulto"
+              image="/images/svg/illustration.svg"
+              buttonRight={<RemoveFavoriteButton />}
+            />
+          ))}
+        </S.WrapperProducts>
       </S.Wrapper>
     </S.Container>
   );
