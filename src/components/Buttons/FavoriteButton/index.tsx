@@ -13,11 +13,11 @@ export function FavoriteButton({ onClick }: FavoriteButtonProps) {
   const [activeFavorite, setActiveFavorite] = useState<boolean>(false);
 
   return (
-    <S.Container onClick={() => setActiveFavorite(!activeFavorite)}>
+    <S.Button onClick={() => setActiveFavorite(!activeFavorite)}>
       <FaHeart
-        color={activeFavorite ? colors.red[500] : colors.white}
         size={24}
+        color={activeFavorite ? colors.red[500] : colors.white}
       />
-    </S.Container>
+    </S.Button>
   );
 }

@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 import { colors } from '~/styles/colors';
 
-export const Container = styled.button`
+export const Button = styled.button`
   position: relative;
 
   width: 4rem;

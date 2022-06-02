@@ -1,6 +1,6 @@
 import * as S from '~/styles/pages/home.styles';
 
-import { BreadCrumb, FavoriteButton } from '~/components';
+import { BreadCrumb, FavoriteButton, RemoveFavoriteButton } from '~/components';
 
 export default function Home() {
   const breadCrumbItems = [
@@ -17,6 +17,8 @@ export default function Home() {
         <h1>Home</h1>
 
         <FavoriteButton />
+
+        <RemoveFavoriteButton />
       </S.Wrapper>
     </S.Container>
   );
