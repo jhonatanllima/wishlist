@@ -7,4 +7,10 @@ export default {
   component: ProductCard,
 } as Meta;
 
-export const Basic: Story = (args) => <ProductCard />;
+export const Basic: Story = (args) => (
+  <ProductCard
+    title="produto de bebe"
+    price="R$ 4,00"
+    image="/images/svg/illustration.svg"
+  />
+);
