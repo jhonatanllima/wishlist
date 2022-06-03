@@ -64,6 +64,7 @@ export const MenuItems = styled.ul`
       align-items: center;
       justify-content: center;
 
+      text-align: center;
       font-size: 0.9rem;
       background: ${colors.red[500]};
     }
