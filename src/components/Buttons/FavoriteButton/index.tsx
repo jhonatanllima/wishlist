@@ -1,20 +1,22 @@
-import { useState } from 'react';
-
 import { FaHeart } from 'react-icons/fa';
+
+import { useFavorites } from '~/hooks/Favorites';
 
 import * as S from './styles';
 import { colors } from '~/styles/colors';
 
 import { FavoriteButtonProps } from '~/types/components/FavoriteButton';
 
-export function FavoriteButton({ onClick }: FavoriteButtonProps) {
-  const [activeFavorite, setActiveFavorite] = useState<boolean>(false);
+export function FavoriteButton({ onClick, activeButton }: FavoriteButtonProps) {
+  const { favoritesIds } = useFavorites();
 
   return (
-    <S.Button onClick={() => setActiveFavorite(!activeFavorite)}>
+    <S.Button onClick={onClick}>
       <FaHeart
         size={24}
-        color={activeFavorite ? colors.red[500] : colors.white}
+        color={
+          favoritesIds.includes(activeButton) ? colors.red[500] : colors.white
+        }
       />
     </S.Button>
   );

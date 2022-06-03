@@ -1,7 +1,17 @@
-import { ReactNode, useContext, createContext } from 'react';
+import {
+  useState,
+  ReactNode,
+  useContext,
+  createContext,
+  SetStateAction,
+} from 'react';
+
+import { ProductProps } from '~/types/services/getProducts';
 
 type FavoritesContextData = {
-  favorite: boolean;
+  favoritesIds: number[];
+  favorites: ProductProps[];
+  setFavorites: (props: SetStateAction<ProductProps[]>) => void;
 };
 
 interface FavoritesProviderProps {
@@ -11,10 +21,14 @@ interface FavoritesProviderProps {
 const FavoritesContext = createContext({} as FavoritesContextData);
 
 const FavoritesProvider = ({ children }: FavoritesProviderProps) => {
-  const favorite = true;
+  const [favorites, setFavorites] = useState<ProductProps[]>([]);
+
+  const favoritesIds = favorites.map((favorite) => favorite.id);
 
   return (
-    <FavoritesContext.Provider value={{ favorite }}>
+    <FavoritesContext.Provider
+      value={{ favorites, setFavorites, favoritesIds }}
+    >
       {children}
     </FavoritesContext.Provider>
   );

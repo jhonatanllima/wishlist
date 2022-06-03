@@ -1,8 +1,9 @@
 import { GetStaticProps } from 'next';
 
+import { ProductProps } from '~/types/services/getProducts';
 import { getProducts } from '~/services/functions/getProducts';
 
-import { ProductProps } from '~/types/services/getProducts';
+import { useFavorites } from '~/hooks/Favorites';
 
 import { BreadCrumb, ProductCard, FavoriteButton } from '~/components';
 
@@ -13,6 +14,8 @@ interface HomeProductsProps {
 }
 
 export default function Home(products: HomeProductsProps) {
+  const { favorites, setFavorites, favoritesIds } = useFavorites();
+
   const breadCrumbItems = [
     {
       title: 'Home',
@@ -32,7 +35,15 @@ export default function Home(products: HomeProductsProps) {
               price={product.price}
               title={product.title}
               image="/images/svg/illustration.svg"
-              buttonLeft={<FavoriteButton />}
+              buttonLeft={
+                <FavoriteButton
+                  activeButton={product.id}
+                  onClick={() =>
+                    !favoritesIds.includes(product.id) &&
+                    setFavorites([...favorites, product])
+                  }
+                />
+              }
             />
           ))}
         </S.WrapperProducts>

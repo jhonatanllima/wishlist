@@ -1,9 +1,11 @@
+import { useFavorites } from '~/hooks/Favorites';
+
 import { BreadCrumb, ProductCard, RemoveFavoriteButton } from '~/components';
 
 import * as S from '~/styles/pages/favorites.styles';
 
 export default function Favorites() {
-  const mockProducts = Array.from({ length: 12 });
+  const { favorites } = useFavorites();
 
   const breadCrumbItems = [
     {
@@ -24,11 +26,11 @@ export default function Favorites() {
         <BreadCrumb breadCrumbItems={breadCrumbItems} />
 
         <S.WrapperProducts>
-          {mockProducts.map((_, index) => (
+          {favorites.map((favorite) => (
             <ProductCard
-              key={index}
-              price="R$ 400,00"
-              title="Roupa de Adulto"
+              key={favorite.id}
+              price={favorite.price}
+              title={favorite.title}
               image="/images/svg/illustration.svg"
               buttonRight={<RemoveFavoriteButton />}
             />
