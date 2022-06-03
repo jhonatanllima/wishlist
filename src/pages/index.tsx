@@ -26,7 +26,7 @@ export default function Home(products: HomeProductsProps) {
         <BreadCrumb breadCrumbItems={breadCrumbItems} />
 
         <S.WrapperProducts>
-          {products?.products?.map((product: ProductProps) => (
+          {products.products.map((product: ProductProps) => (
             <ProductCard
               key={product.id}
               price={product.price}
