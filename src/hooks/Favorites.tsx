@@ -4,6 +4,7 @@ import {
   useContext,
   createContext,
   SetStateAction,
+  useEffect,
 } from 'react';
 
 import { ProductProps } from '~/types/services/getProducts';
@@ -24,6 +25,24 @@ const FavoritesProvider = ({ children }: FavoritesProviderProps) => {
   const [favorites, setFavorites] = useState<ProductProps[]>([]);
 
   const favoritesIds = favorites.map((favorite) => favorite.id);
+
+  useEffect(() => {
+    if (favorites.length !== 0) {
+      localStorage.setItem('favorites', JSON.stringify(favorites));
+    }
+
+    if (localStorage.getItem('favorites')) {
+      const handleFavoritesOnLocalStorage = localStorage.getItem('favorites');
+
+      const myLocalFavorites = JSON.parse(
+        String(handleFavoritesOnLocalStorage)
+      );
+
+      if (favorites.length === 0 && !!myLocalFavorites) {
+        setFavorites(myLocalFavorites);
+      }
+    }
+  }, [favorites]);
 
   return (
     <FavoritesContext.Provider
