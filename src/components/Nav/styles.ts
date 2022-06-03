@@ -67,6 +67,10 @@ export const MenuItems = styled.ul`
       text-align: center;
       font-size: 0.9rem;
       background: ${colors.red[500]};
+
+      p {
+        margin-left: -0.1rem;
+      }
     }
   }
 
