@@ -1,11 +1,15 @@
 import Link from 'next/link';
 import { Fragment } from 'react';
 
+import { useSearch } from '~/hooks/Search';
+
 import * as S from './styles';
 
 import { NavProps } from '~/types/components/Nav';
 
 export function Nav({ menuItems }: NavProps) {
+  const { setSearch } = useSearch();
+
   return (
     <S.Container>
       <S.MenuItems>
@@ -31,7 +35,7 @@ export function Nav({ menuItems }: NavProps) {
       <input
         type="text"
         placeholder="Buscar"
-        onChange={(e) => console.log(e.target.value)}
+        onChange={(e) => setSearch(e.target.value)}
       />
     </S.Container>
   );

@@ -1,13 +1,15 @@
 import Head from 'next/head';
 import type { AppProps } from 'next/app';
 
+import { AppProvider } from '~/hooks';
+
 import { Header } from '~/components';
 
 import GlobalStyles from '~/styles/GlobalStyles';
 
 function App({ Component, pageProps }: AppProps) {
   return (
-    <>
+    <AppProvider>
       <Header logo="MagaNets" />
       <Head>
         <title>Wishlist</title>
@@ -25,7 +27,7 @@ function App({ Component, pageProps }: AppProps) {
       </Head>
       <GlobalStyles />
       <Component {...pageProps} />
-    </>
+    </AppProvider>
   );
 }
 
