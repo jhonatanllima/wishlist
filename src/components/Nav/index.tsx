@@ -1,17 +1,9 @@
 import Link from 'next/link';
-import { ReactNode, Fragment } from 'react';
+import { Fragment } from 'react';
 
 import * as S from './styles';
 
-type menuItems = {
-  link?: string;
-  title: string;
-  icon: ReactNode;
-};
-
-interface NavProps {
-  menuItems: menuItems[];
-}
+import { NavProps } from '~/types/components/Nav';
 
 export function Nav({ menuItems }: NavProps) {
   return (

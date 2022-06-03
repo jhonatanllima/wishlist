@@ -1,16 +1,8 @@
 import Image from 'next/image';
-import { ReactNode } from 'react';
 
 import * as S from './styles';
 
-interface ProductCardProps {
-  image: string;
-  title: string;
-  price: string;
-
-  buttonLeft?: ReactNode;
-  buttonRight?: ReactNode;
-}
+import { ProductCardProps } from '~/types/components/ProductCard';
 
 export function ProductCard({
   image,

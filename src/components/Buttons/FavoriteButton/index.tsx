@@ -5,9 +5,7 @@ import { FaHeart } from 'react-icons/fa';
 import * as S from './styles';
 import { colors } from '~/styles/colors';
 
-interface FavoriteButtonProps {
-  onClick?: () => void;
-}
+import { FavoriteButtonProps } from '~/types/components/FavoriteButton';
 
 export function FavoriteButton({ onClick }: FavoriteButtonProps) {
   const [activeFavorite, setActiveFavorite] = useState<boolean>(false);

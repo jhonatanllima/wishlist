@@ -8,7 +8,7 @@ import GlobalStyles from '~/styles/GlobalStyles';
 function App({ Component, pageProps }: AppProps) {
   return (
     <>
-      <Header />
+      <Header logo="MagaNets" />
       <Head>
         <title>Wishlist</title>
         <link rel="shortcut icon" href="images/icons/favicon.ico" />

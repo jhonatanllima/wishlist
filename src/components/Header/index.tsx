@@ -9,7 +9,9 @@ import { Nav } from '~/components';
 
 import * as S from './styles';
 
-export function Header() {
+import { HeaderProps } from '~/types/components/Header';
+
+export function Header({ logo }: HeaderProps) {
   const menuItems = [
     {
       title: 'Cidade: São Paulo',
@@ -38,7 +40,7 @@ export function Header() {
             </a>
           </Link>
 
-          <h1>MagaNets</h1>
+          <h1>{logo}</h1>
         </S.WrapperLogo>
 
         <Nav menuItems={menuItems} />

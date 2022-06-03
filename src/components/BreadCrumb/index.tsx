@@ -2,15 +2,7 @@ import Link from 'next/link';
 
 import * as S from './styles';
 
-type breadCrumbItems = {
-  link: string;
-  title: string;
-  separator?: string;
-};
-
-interface BreadCrumbProps {
-  breadCrumbItems: breadCrumbItems[];
-}
+import { BreadCrumbProps } from '~/types/components/BreadCrumb';
 
 export function BreadCrumb({ breadCrumbItems }: BreadCrumbProps) {
   return (
