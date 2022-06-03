@@ -6,6 +6,7 @@ import {
   SetStateAction,
   useEffect,
 } from 'react';
+import { toast } from 'react-toastify';
 
 import { ProductProps } from '~/types/services/getProducts';
 
@@ -28,6 +29,8 @@ const FavoritesProvider = ({ children }: FavoritesProviderProps) => {
     number | null
   >(null);
 
+  const removedFavoriteToast = () =>
+    toast.success('Item Removido com Sucesso!');
   const favoritesIds = favorites.map((favorite) => favorite.id);
 
   useEffect(() => {
@@ -40,9 +43,11 @@ const FavoritesProvider = ({ children }: FavoritesProviderProps) => {
     if (localStorage.getItem('myLocalFavorites')) {
       const handleFavoritesOnLocalStorage =
         localStorage.getItem('myLocalFavorites');
+
       const myLocalFavorites = JSON.parse(
         String(handleFavoritesOnLocalStorage)
       );
+
       if (favorites.length === 0 && !!myLocalFavorites) {
         setFavorites(myLocalFavorites);
       }
@@ -61,6 +66,7 @@ const FavoritesProvider = ({ children }: FavoritesProviderProps) => {
           'myLocalFavorites',
           JSON.stringify(removedFavorite)
         );
+        removedFavoriteToast();
       }
     }
   }, [itemToRemoveFavorite]);

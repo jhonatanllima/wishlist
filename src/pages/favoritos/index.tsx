@@ -1,3 +1,5 @@
+import Link from 'next/link';
+
 import { useFavorites } from '~/hooks/Favorites';
 
 import { BreadCrumb, ProductCard, RemoveFavoriteButton } from '~/components';
@@ -39,6 +41,20 @@ export default function Favorites() {
               }
             />
           ))}
+
+          {!favorites.length && (
+            <S.WrapperErrors>
+              <h2>Nenhum item ainda em sua lista de desejo! {':('}</h2>
+
+              <h3>
+                Clique
+                <Link href="/">
+                  <a>aqui</a>
+                </Link>
+                e escolha seus favoritos!
+              </h3>
+            </S.WrapperErrors>
+          )}
         </S.WrapperProducts>
       </S.Wrapper>
     </S.Container>

@@ -1,10 +1,13 @@
 import Head from 'next/head';
 import type { AppProps } from 'next/app';
 
+import { ToastContainer } from 'react-toastify';
+
 import { AppProvider } from '~/hooks';
 
 import { Header } from '~/components';
 
+import 'react-toastify/dist/ReactToastify.css';
 import GlobalStyles from '~/styles/GlobalStyles';
 
 function App({ Component, pageProps }: AppProps) {
@@ -25,6 +28,7 @@ function App({ Component, pageProps }: AppProps) {
           content="A test project for Luiza Labs working with TypeScript, React, NextJs and styled components"
         />
       </Head>
+      <ToastContainer />
       <GlobalStyles />
       <Component {...pageProps} />
     </AppProvider>
