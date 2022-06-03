@@ -1,19 +1,12 @@
 import { api } from '~/services/config';
 
-interface ProductsProps {
-  id: number;
-  title: string;
-  price: string;
-  image: string;
-  currencyId?: string;
-  currencyFormat?: string;
-}
+import { ProductProps } from '~/types/services/getProducts';
 
-export async function getProducts(): Promise<ProductsProps[]> {
+export async function getProducts(): Promise<ProductProps[]> {
   try {
     const {
       data: { products },
-    } = await api.get<{ products: ProductsProps[] }>(
+    } = await api.get<{ products: ProductProps[] }>(
       `/66063904-d43c-49ed-9329-d69ad44b885e`
     );
 
@@ -22,10 +15,10 @@ export async function getProducts(): Promise<ProductsProps[]> {
         id: product.id,
         title: product.title,
         image: product.image,
-        price: `${product.currencyFormat} - ${Intl.NumberFormat('pt-BR', {
+        price: `${Intl.NumberFormat('pt-BR', {
           style: 'currency',
           currency: product.currencyId,
-        }).format(Number(product.price))}`,
+        }).format(Number(product.price))} `,
       };
     });
 

@@ -1,6 +1,6 @@
-import * as S from '~/styles/pages/favorites.styles';
-
 import { BreadCrumb, ProductCard, RemoveFavoriteButton } from '~/components';
+
+import * as S from '~/styles/pages/favorites.styles';
 
 export default function Favorites() {
   const mockProducts = Array.from({ length: 12 });

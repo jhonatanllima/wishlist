@@ -1,15 +1,18 @@
+import { GetStaticProps } from 'next';
+
+import { getProducts } from '~/services/functions/getProducts';
+
+import { ProductProps } from '~/types/services/getProducts';
+
+import { BreadCrumb, ProductCard, FavoriteButton } from '~/components';
+
 import * as S from '~/styles/pages/home.styles';
 
-import {
-  BreadCrumb,
-  ProductCard,
-  FavoriteButton,
-  RemoveFavoriteButton,
-} from '~/components';
+interface HomeProductsProps {
+  products: ProductProps[];
+}
 
-export default function Home() {
-  const mockProducts = Array.from({ length: 12 });
-
+export default function Home(products: HomeProductsProps) {
   const breadCrumbItems = [
     {
       title: 'Home',
@@ -23,11 +26,11 @@ export default function Home() {
         <BreadCrumb breadCrumbItems={breadCrumbItems} />
 
         <S.WrapperProducts>
-          {mockProducts.map((_, index) => (
+          {products?.products?.map((product: ProductProps) => (
             <ProductCard
-              key={index}
-              price="R$ 4,00"
-              title="Roupa de bebê"
+              key={product.id}
+              price={product.price}
+              title={product.title}
               image="/images/svg/illustration.svg"
               buttonLeft={<FavoriteButton />}
             />
@@ -37,3 +40,12 @@ export default function Home() {
     </S.Container>
   );
 }
+
+export const getStaticProps: GetStaticProps = async () => {
+  const products = await getProducts();
+
+  return {
+    props: { products },
+    revalidate: 60 * 60 * 24, // 24 hours
+  };
+};
