@@ -2,6 +2,7 @@ import Link from 'next/link';
 import { Fragment } from 'react';
 
 import { useSearch } from '~/hooks/Search';
+import { useFavorites } from '~/hooks/Favorites';
 
 import * as S from './styles';
 
@@ -9,6 +10,7 @@ import { NavProps } from '~/types/components/Nav';
 
 export function Nav({ menuItems }: NavProps) {
   const { setSearch } = useSearch();
+  const { favorites } = useFavorites();
 
   return (
     <S.Container>
@@ -20,6 +22,8 @@ export function Nav({ menuItems }: NavProps) {
                 <a>
                   {itemMenu.icon}
                   {itemMenu.title}
+
+                  <span>{favorites.length}</span>
                 </a>
               </Link>
             ) : (
