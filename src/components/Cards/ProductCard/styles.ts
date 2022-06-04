@@ -27,6 +27,7 @@ export const Container = styled.div`
   strong {
     margin-top: 1rem;
 
+    text-align: center;
     font-size: 1.3rem;
   }
 

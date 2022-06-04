@@ -37,6 +37,8 @@ export const MenuItems = styled.ul`
   color: ${colors.white};
 
   a {
+    position: relative;
+
     display: flex;
     align-items: center;
 
@@ -47,6 +49,28 @@ export const MenuItems = styled.ul`
 
     svg {
       margin-right: 0.5rem;
+    }
+
+    span {
+      top: -1rem;
+      left: -1rem;
+      position: absolute;
+
+      width: 1.6rem;
+      height: 1.6rem;
+      border-radius: 50%;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      text-align: center;
+      font-size: 0.9rem;
+      background: ${colors.red[500]};
+
+      p {
+        margin-left: -0.1rem;
+      }
     }
   }
 

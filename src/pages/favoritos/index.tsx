@@ -1,9 +1,20 @@
-import * as S from '~/styles/pages/favorites.styles';
+import Link from 'next/link';
+import { useEffect, useState } from 'react';
+
+import { useSearch } from '~/hooks/Search';
+import { useFavorites } from '~/hooks/Favorites';
+
+import { normalizeFilterOfSearch } from '~/utils/normalizeFilterOfSearch';
 
 import { BreadCrumb, ProductCard, RemoveFavoriteButton } from '~/components';
 
+import * as S from '~/styles/pages/favorites.styles';
+
 export default function Favorites() {
-  const mockProducts = Array.from({ length: 12 });
+  const { search } = useSearch();
+  const { favorites, handleRemoveFavorite } = useFavorites();
+
+  const [productsFavorite, setProductsFavorite] = useState(favorites);
 
   const breadCrumbItems = [
     {
@@ -18,21 +29,55 @@ export default function Favorites() {
     },
   ];
 
+  useEffect(() => {
+    setProductsFavorite(() => {
+      if (!search) {
+        return favorites;
+      }
+
+      const filteredProductsFavorite = productsFavorite.filter((favorite) =>
+        normalizeFilterOfSearch(favorite.title).includes(
+          normalizeFilterOfSearch(search)
+        )
+      );
+
+      return filteredProductsFavorite;
+    });
+  }, [search, favorites]);
+
   return (
     <S.Container>
       <S.Wrapper>
         <BreadCrumb breadCrumbItems={breadCrumbItems} />
 
         <S.WrapperProducts>
-          {mockProducts.map((_, index) => (
+          {productsFavorite.map((favorite) => (
             <ProductCard
-              key={index}
-              price="R$ 400,00"
-              title="Roupa de Adulto"
+              key={favorite.id}
+              price={favorite.price}
+              title={favorite.title}
               image="/images/svg/illustration.svg"
-              buttonRight={<RemoveFavoriteButton />}
+              buttonRight={
+                <RemoveFavoriteButton
+                  onClick={() => handleRemoveFavorite(favorite.id)}
+                />
+              }
             />
           ))}
+
+          {!favorites.length && (
+            <S.WrapperErrors>
+              <h2>Nenhum item ainda em sua lista de desejo! {':('}</h2>
+
+              <h3>
+                Clique
+                <Link href="/">
+                  <a>aqui</a>
+                </Link>
+                e escolha seus favoritos!
+              </h3>
+            </S.WrapperErrors>
+          )}
         </S.WrapperProducts>
       </S.Wrapper>
     </S.Container>
