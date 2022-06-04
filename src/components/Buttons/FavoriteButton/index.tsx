@@ -1,9 +1,9 @@
 import { FaHeart } from 'react-icons/fa';
 
-import { useFavorites } from '~/hooks/Favorites';
+import { useFavorites } from '../../../hooks/Favorites';
 
 import * as S from './styles';
-import { colors } from '~/styles/colors';
+import { colors } from '../../../styles/colors';
 
 import { FavoriteButtonProps } from '~/types/components/FavoriteButton';
 

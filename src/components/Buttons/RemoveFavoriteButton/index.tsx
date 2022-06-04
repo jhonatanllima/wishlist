@@ -1,9 +1,9 @@
 import { AiOutlineCloseCircle } from 'react-icons/ai';
 
 import * as S from './styles';
-import { colors } from '~/styles/colors';
+import { colors } from '../../../styles/colors';
 
-import { RemoveFavoriteButtonProps } from '~/types/components/RemoveFavoriteButton';
+import { RemoveFavoriteButtonProps } from '../../../types/components/RemoveFavoriteButton';
 
 export function RemoveFavoriteButton({ onClick }: RemoveFavoriteButtonProps) {
   return (

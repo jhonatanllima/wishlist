@@ -1,8 +1,8 @@
 import Link from 'next/link';
 import { Fragment } from 'react';
 
-import { useSearch } from '~/hooks/Search';
-import { useFavorites } from '~/hooks/Favorites';
+import { useSearch } from '../../hooks/Search';
+import { useFavorites } from '../../hooks/Favorites';
 
 import * as S from './styles';
 
