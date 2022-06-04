@@ -7,7 +7,7 @@ import { BreadCrumb, ProductCard, RemoveFavoriteButton } from '~/components';
 import * as S from '~/styles/pages/favorites.styles';
 
 export default function Favorites() {
-  const { favorites, setItemToRemoveFavorite } = useFavorites();
+  const { favorites, handleRemoveFavorite } = useFavorites();
 
   const breadCrumbItems = [
     {
@@ -36,7 +36,7 @@ export default function Favorites() {
               image="/images/svg/illustration.svg"
               buttonRight={
                 <RemoveFavoriteButton
-                  onClick={() => setItemToRemoveFavorite(favorite.id)}
+                  onClick={() => handleRemoveFavorite(favorite.id)}
                 />
               }
             />

@@ -13,7 +13,7 @@ interface HomeProductsProps {
   products: ProductProps[];
 }
 
-export default function Home(products: HomeProductsProps) {
+export default function Home({ products }: HomeProductsProps) {
   const { favorites, setFavorites, favoritesIds } = useFavorites();
 
   const breadCrumbItems = [
@@ -29,7 +29,7 @@ export default function Home(products: HomeProductsProps) {
         <BreadCrumb breadCrumbItems={breadCrumbItems} />
 
         <S.WrapperProducts>
-          {products.products.map((product: ProductProps) => (
+          {products.map((product: ProductProps) => (
             <ProductCard
               key={product.id}
               price={product.price}

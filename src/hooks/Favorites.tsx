@@ -1,10 +1,10 @@
 import {
   useState,
   ReactNode,
+  useEffect,
   useContext,
   createContext,
   SetStateAction,
-  useEffect,
 } from 'react';
 import { toast } from 'react-toastify';
 
@@ -13,8 +13,8 @@ import { ProductProps } from '~/types/services/getProducts';
 type FavoritesContextData = {
   favoritesIds: number[];
   favorites: ProductProps[];
+  handleRemoveFavorite: (id: number) => void;
   setFavorites: (props: SetStateAction<ProductProps[]>) => void;
-  setItemToRemoveFavorite: (props: SetStateAction<number | null>) => void;
 };
 
 interface FavoritesProviderProps {
@@ -25,12 +25,10 @@ const FavoritesContext = createContext({} as FavoritesContextData);
 
 const FavoritesProvider = ({ children }: FavoritesProviderProps) => {
   const [favorites, setFavorites] = useState<ProductProps[]>([]);
-  const [itemToRemoveFavorite, setItemToRemoveFavorite] = useState<
-    number | null
-  >(null);
 
   const removedFavoriteToast = () =>
     toast.success('Item removido com sucesso!');
+
   const favoritesIds = favorites.map((favorite) => favorite.id);
 
   useEffect(() => {
@@ -54,26 +52,19 @@ const FavoritesProvider = ({ children }: FavoritesProviderProps) => {
     }
   }, []);
 
-  useEffect(() => {
-    if (itemToRemoveFavorite !== null) {
-      const removedFavorite = favorites.filter(
-        (favorite) => favorite.id !== itemToRemoveFavorite
-      );
+  function handleRemoveFavorite(id: number) {
+    const filteredFavorites = favorites.filter(
+      (favorite) => favorite.id !== id
+    );
 
-      if (removedFavorite !== favorites) {
-        setFavorites(removedFavorite);
-        localStorage.setItem(
-          'myLocalFavorites',
-          JSON.stringify(removedFavorite)
-        );
-        removedFavoriteToast();
-      }
-    }
-  }, [itemToRemoveFavorite]);
+    setFavorites(filteredFavorites);
+    localStorage.setItem('myLocalFavorites', JSON.stringify(filteredFavorites));
+    removedFavoriteToast();
+  }
 
   return (
     <FavoritesContext.Provider
-      value={{ favorites, setFavorites, favoritesIds, setItemToRemoveFavorite }}
+      value={{ favorites, setFavorites, favoritesIds, handleRemoveFavorite }}
     >
       {children}
     </FavoritesContext.Provider>
