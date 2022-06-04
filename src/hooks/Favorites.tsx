@@ -30,7 +30,7 @@ const FavoritesProvider = ({ children }: FavoritesProviderProps) => {
   >(null);
 
   const removedFavoriteToast = () =>
-    toast.success('Item Removido com Sucesso!');
+    toast.success('Item removido com sucesso!');
   const favoritesIds = favorites.map((favorite) => favorite.id);
 
   useEffect(() => {
