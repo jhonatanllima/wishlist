@@ -9,6 +9,7 @@ export default {
 
 export const Basic: Story = (args) => (
   <ProductCard
+    alt="produto de bebe"
     title="produto de bebe"
     price="R$ 4,00"
     image="/images/svg/illustration.svg"

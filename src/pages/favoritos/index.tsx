@@ -54,6 +54,7 @@ export default function Favorites() {
           {productsFavorite.map((favorite) => (
             <ProductCard
               key={favorite.id}
+              alt={favorite.title}
               price={favorite.price}
               title={favorite.title}
               image="/images/svg/illustration.svg"

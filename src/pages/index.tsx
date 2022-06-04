@@ -55,6 +55,7 @@ export default function Home(props: HomeProductsProps) {
           {products.map((product: ProductProps) => (
             <ProductCard
               key={product.id}
+              alt={product.title}
               price={product.price}
               title={product.title}
               image="/images/svg/illustration.svg"
