@@ -41,6 +41,7 @@ export function Nav({ menuItems }: NavProps) {
       <input
         type="text"
         placeholder="Buscar"
+        aria-label="Campo de busca"
         onChange={(e) => setSearch(e.target.value)}
       />
     </S.Container>

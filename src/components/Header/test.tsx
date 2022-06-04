@@ -5,9 +5,11 @@ import { Header } from '.';
 
 describe('<Header />', () => {
   it('should render the correctly', () => {
-    renderWithTheme(<Header logo="logo" />);
+    const { container } = renderWithTheme(<Header logo="logo" />);
 
     expect(screen.getByRole('heading', { name: /logo/i })).toBeInTheDocument();
     expect(screen.getByLabelText(/seta para a esquerda/i)).toBeInTheDocument();
+
+    expect(container).toMatchSnapshot();
   });
 });
