@@ -1,19 +1,20 @@
-import * as S from '~/styles/pages/home.styles';
+import * as S from '~/styles/pages/favorites.styles';
 
-import {
-  BreadCrumb,
-  ProductCard,
-  FavoriteButton,
-  RemoveFavoriteButton,
-} from '~/components';
+import { BreadCrumb, ProductCard, RemoveFavoriteButton } from '~/components';
 
-export default function Home() {
+export default function Favorites() {
   const mockProducts = Array.from({ length: 12 });
 
   const breadCrumbItems = [
     {
       title: 'Home',
+      separator: '>',
       link: '/',
+    },
+
+    {
+      title: 'Favoritos',
+      link: '/favoritos',
     },
   ];
 
@@ -26,10 +27,10 @@ export default function Home() {
           {mockProducts.map((_, index) => (
             <ProductCard
               key={index}
-              price="R$ 4,00"
-              title="Roupa de bebê"
+              price="R$ 400,00"
+              title="Roupa de Adulto"
               image="/images/svg/illustration.svg"
-              buttonLeft={<FavoriteButton />}
+              buttonRight={<RemoveFavoriteButton />}
             />
           ))}
         </S.WrapperProducts>

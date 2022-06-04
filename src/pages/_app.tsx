@@ -1,11 +1,14 @@
 import Head from 'next/head';
 import type { AppProps } from 'next/app';
 
+import { Header } from '~/components';
+
 import GlobalStyles from '~/styles/GlobalStyles';
 
 function App({ Component, pageProps }: AppProps) {
   return (
     <>
+      <Header />
       <Head>
         <title>Wishlist</title>
         <link rel="shortcut icon" href="images/icons/favicon.ico" />
