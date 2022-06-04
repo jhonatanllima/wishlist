@@ -1,9 +1,13 @@
+import { useEffect, useState } from 'react';
 import { GetStaticProps } from 'next';
 
 import { ProductProps } from '~/types/services/getProducts';
 import { getProducts } from '~/services/functions/getProducts';
 
+import { useSearch } from '~/hooks/Search';
 import { useFavorites } from '~/hooks/Favorites';
+
+import { normalizeFilterOfSearch } from '~/utils/normalizeFilterOfSearch';
 
 import { BreadCrumb, ProductCard, FavoriteButton } from '~/components';
 
@@ -13,8 +17,11 @@ interface HomeProductsProps {
   products: ProductProps[];
 }
 
-export default function Home({ products }: HomeProductsProps) {
+export default function Home(props: HomeProductsProps) {
+  const { search } = useSearch();
   const { favorites, setFavorites, favoritesIds } = useFavorites();
+
+  const [products, setProducts] = useState<ProductProps[]>(props.products);
 
   const breadCrumbItems = [
     {
@@ -22,6 +29,22 @@ export default function Home({ products }: HomeProductsProps) {
       link: '/',
     },
   ];
+
+  useEffect(() => {
+    setProducts(() => {
+      if (!search) {
+        return props.products;
+      }
+
+      const filteredProducts = props.products.filter((product) =>
+        normalizeFilterOfSearch(product.title).includes(
+          normalizeFilterOfSearch(search)
+        )
+      );
+
+      return filteredProducts;
+    });
+  }, [search, props.products]);
 
   return (
     <S.Container>

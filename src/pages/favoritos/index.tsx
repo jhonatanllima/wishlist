@@ -1,13 +1,20 @@
 import Link from 'next/link';
+import { useEffect, useState } from 'react';
 
+import { useSearch } from '~/hooks/Search';
 import { useFavorites } from '~/hooks/Favorites';
+
+import { normalizeFilterOfSearch } from '~/utils/normalizeFilterOfSearch';
 
 import { BreadCrumb, ProductCard, RemoveFavoriteButton } from '~/components';
 
 import * as S from '~/styles/pages/favorites.styles';
 
 export default function Favorites() {
+  const { search } = useSearch();
   const { favorites, handleRemoveFavorite } = useFavorites();
+
+  const [productsFavorite, setProductsFavorite] = useState(favorites);
 
   const breadCrumbItems = [
     {
@@ -22,13 +29,29 @@ export default function Favorites() {
     },
   ];
 
+  useEffect(() => {
+    setProductsFavorite(() => {
+      if (!search) {
+        return favorites;
+      }
+
+      const filteredProductsFavorite = productsFavorite.filter((favorite) =>
+        normalizeFilterOfSearch(favorite.title).includes(
+          normalizeFilterOfSearch(search)
+        )
+      );
+
+      return filteredProductsFavorite;
+    });
+  }, [search, favorites]);
+
   return (
     <S.Container>
       <S.Wrapper>
         <BreadCrumb breadCrumbItems={breadCrumbItems} />
 
         <S.WrapperProducts>
-          {favorites.map((favorite) => (
+          {productsFavorite.map((favorite) => (
             <ProductCard
               key={favorite.id}
               price={favorite.price}
