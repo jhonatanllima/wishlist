@@ -1,19 +1,17 @@
 import Link from 'next/link';
-import { ReactNode, Fragment } from 'react';
+import { Fragment } from 'react';
+
+import { useSearch } from '~/hooks/Search';
+import { useFavorites } from '~/hooks/Favorites';
 
 import * as S from './styles';
 
-type menuItems = {
-  link?: string;
-  title: string;
-  icon: ReactNode;
-};
-
-interface NavProps {
-  menuItems: menuItems[];
-}
+import { NavProps } from '~/types/components/Nav';
 
 export function Nav({ menuItems }: NavProps) {
+  const { setSearch } = useSearch();
+  const { favorites } = useFavorites();
+
   return (
     <S.Container>
       <S.MenuItems>
@@ -24,6 +22,10 @@ export function Nav({ menuItems }: NavProps) {
                 <a>
                   {itemMenu.icon}
                   {itemMenu.title}
+
+                  <span>
+                    <p>{favorites.length}</p>
+                  </span>
                 </a>
               </Link>
             ) : (
@@ -39,7 +41,7 @@ export function Nav({ menuItems }: NavProps) {
       <input
         type="text"
         placeholder="Buscar"
-        onChange={(e) => console.log(e.target.value)}
+        onChange={(e) => setSearch(e.target.value)}
       />
     </S.Container>
   );

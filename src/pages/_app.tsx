@@ -1,14 +1,19 @@
 import Head from 'next/head';
 import type { AppProps } from 'next/app';
 
+import { ToastContainer } from 'react-toastify';
+
+import { AppProvider } from '~/hooks';
+
 import { Header } from '~/components';
 
+import 'react-toastify/dist/ReactToastify.css';
 import GlobalStyles from '~/styles/GlobalStyles';
 
 function App({ Component, pageProps }: AppProps) {
   return (
-    <>
-      <Header />
+    <AppProvider>
+      <Header logo="MagaNets" />
       <Head>
         <title>Wishlist</title>
         <link rel="shortcut icon" href="images/icons/favicon.ico" />
@@ -23,9 +28,10 @@ function App({ Component, pageProps }: AppProps) {
           content="A test project for Luiza Labs working with TypeScript, React, NextJs and styled components"
         />
       </Head>
+      <ToastContainer />
       <GlobalStyles />
       <Component {...pageProps} />
-    </>
+    </AppProvider>
   );
 }
 
