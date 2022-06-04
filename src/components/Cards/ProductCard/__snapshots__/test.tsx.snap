@@ -1,0 +1,192 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`< ProductCard />  should render correctly 1`] = `
+.c2 {
+  position: relative;
+  width: 3rem;
+  height: 4rem;
+  border: none;
+  border-radius: 0.3rem;
+  background: #000000;
+}
+
+.c2:hover {
+  cursor: pointer;
+}
+
+.c2:after {
+  left: 0;
+  bottom: 0;
+  position: absolute;
+  width: 0;
+  height: 0;
+  content: '';
+  border-left: 1.5rem solid transparent;
+  border-right: 1.6rem solid transparent;
+  border-bottom: 0.7rem solid #FFFFFF;
+}
+
+.c4 {
+  width: 3rem;
+  height: 3rem;
+  border: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  background: transparent;
+}
+
+.c4:hover {
+  cursor: pointer;
+}
+
+.c0 {
+  position: relative;
+  width: 15.5rem;
+  padding: 1rem;
+  min-height: 25rem;
+  border-radius: 0.3rem;
+  border: 1px solid #c9c9c9;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  background: #FFFFFF;
+  box-shadow: 0px 1px 5px 0px rgba(143,143,143,0.6);
+  -moz-box-shadow: 0px 1px 5px 0px rgba(143,143,143,0.6);
+  -webkit-box-shadow: 0px 1px 5px 0px rgba(143,143,143,0.6);
+}
+
+.c0 img {
+  object-fit: cover;
+}
+
+.c0 strong {
+  margin-top: 1rem;
+  text-align: center;
+  font-size: 1.3rem;
+}
+
+.c0 span {
+  margin-top: 2.5rem;
+  font-weight: bold;
+  font-size: 1.3rem;
+  color: #DAB600;
+}
+
+.c1 {
+  top: -0.3rem;
+  left: 0.3rem;
+  z-index: 5;
+  position: absolute;
+}
+
+.c3 {
+  top: 0;
+  right: 0;
+  z-index: 5;
+  position: absolute;
+}
+
+<div>
+  <div
+    class="c0"
+  >
+    <div
+      class="c1"
+    >
+      <button
+        aria-label="Favoritar"
+        class="c2"
+      >
+        <svg
+          color="#FFFFFF"
+          fill="currentColor"
+          height="24"
+          stroke="currentColor"
+          stroke-width="0"
+          style="color: rgb(255, 255, 255);"
+          viewBox="0 0 512 512"
+          width="24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M462.3 62.6C407.5 15.9 326 24.3 275.7 76.2L256 96.5l-19.7-20.3C186.1 24.3 104.5 15.9 49.7 62.6c-62.8 53.6-66.1 149.8-9.9 207.9l193.5 199.8c12.5 12.9 32.8 12.9 45.3 0l193.5-199.8c56.3-58.1 53-154.3-9.8-207.9z"
+          />
+        </svg>
+      </button>
+    </div>
+    <div
+      class="c3"
+    >
+      <button
+        aria-label="Remover favorito"
+        class="c4"
+      >
+        <svg
+          color="#000000"
+          fill="currentColor"
+          height="25"
+          stroke="currentColor"
+          stroke-width="0"
+          style="color: rgb(0, 0, 0);"
+          viewBox="0 0 1024 1024"
+          width="25"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M685.4 354.8c0-4.4-3.6-8-8-8l-66 .3L512 465.6l-99.3-118.4-66.1-.3c-4.4 0-8 3.5-8 8 0 1.9.7 3.7 1.9 5.2l130.1 155L340.5 670a8.32 8.32 0 0 0-1.9 5.2c0 4.4 3.6 8 8 8l66.1-.3L512 564.4l99.3 118.4 66 .3c4.4 0 8-3.5 8-8 0-1.9-.7-3.7-1.9-5.2L553.5 515l130.1-155c1.2-1.4 1.8-3.3 1.8-5.2z"
+          />
+          <path
+            d="M512 65C264.6 65 64 265.6 64 513s200.6 448 448 448 448-200.6 448-448S759.4 65 512 65zm0 820c-205.4 0-372-166.6-372-372s166.6-372 372-372 372 166.6 372 372-166.6 372-372 372z"
+          />
+        </svg>
+      </button>
+    </div>
+    <span
+      style="box-sizing: border-box; display: inline-block; overflow: hidden; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative; max-width: 100%;"
+    >
+      <span
+        style="box-sizing: border-box; display: block; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; max-width: 100%;"
+      >
+        <img
+          alt=""
+          aria-hidden="true"
+          src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%27300%27%20height=%27300%27/%3e"
+          style="display: block; max-width: 100%; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px;"
+        />
+      </span>
+      <img
+        alt="alt image"
+        data-nimg="intrinsic"
+        decoding="async"
+        src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+        style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; box-sizing: border-box; padding: 0px; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%;"
+      />
+      <noscript />
+    </span>
+    <strong>
+      title
+    </strong>
+    <span>
+      R$ 4,00
+    </span>
+  </div>
+</div>
+`;

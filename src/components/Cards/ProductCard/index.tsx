@@ -21,7 +21,9 @@ export function ProductCard({
       )}
 
       <Image src={image} width={300} height={300} alt={alt} />
+
       <strong>{title}</strong>
+
       <span>{price}</span>
     </S.Container>
   );

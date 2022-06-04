@@ -66,7 +66,7 @@ export default function Favorites() {
             />
           ))}
 
-          {!favorites.length && (
+          {!favorites?.length && (
             <S.WrapperErrors>
               <h2>Nenhum item ainda em sua lista de desejo! {':('}</h2>
 

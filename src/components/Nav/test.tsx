@@ -1,38 +1,36 @@
-import { render, screen } from '@testing-library/react';
+import { screen } from '@testing-library/react';
 
-import { FaHeart, FaPhoneAlt } from 'react-icons/fa';
 import { IoLocationSharp } from 'react-icons/io5';
+import { FaHeart, FaPhoneAlt } from 'react-icons/fa';
+
+import { renderWithTheme } from '~/utils/tests/helpers';
 
 import { Nav } from '.';
 
-describe('< Nav /> ', () => {
-  const menuItems = [
-    {
-      title: 'Cidade: São Paulo',
-      icon: <IoLocationSharp />,
-    },
+const menuItems = [
+  {
+    title: 'Cidade: São Paulo',
+    icon: <IoLocationSharp />,
+  },
 
-    {
-      title: 'Central de Atendimento',
-      icon: <FaPhoneAlt />,
-    },
+  {
+    title: 'Central de Atendimento',
+    icon: <FaPhoneAlt />,
+  },
 
-    {
-      title: 'Lista de Desejos',
-      icon: <FaHeart />,
-      link: '/favoritos',
-    },
-  ];
+  {
+    title: 'Lista de Desejos',
+    icon: <FaHeart />,
+    link: '/favoritos',
+  },
+];
 
+describe('<Nav /> ', () => {
   it('should render the heading', () => {
-    const { container } = render(<Nav menuItems={menuItems} />);
+    const { container } = renderWithTheme(<Nav menuItems={menuItems} />);
 
-    expect(
-      screen.getByRole('heading', {
-        name: /Nav/i,
-      })
-    ).toBeInTheDocument();
+    expect(screen.getByRole('nav')).toBeInTheDocument();
 
-    expect(container.firstChild).toMatchSnapshot();
+    expect(container).toMatchSnapshot();
   });
 });

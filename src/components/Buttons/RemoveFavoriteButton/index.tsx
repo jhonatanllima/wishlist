@@ -7,7 +7,7 @@ import { RemoveFavoriteButtonProps } from '~/types/components/RemoveFavoriteButt
 
 export function RemoveFavoriteButton({ onClick }: RemoveFavoriteButtonProps) {
   return (
-    <S.Button onClick={onClick}>
+    <S.Button onClick={onClick} aria-label="Remover favorito">
       <AiOutlineCloseCircle size={25} color={colors.black} />
     </S.Button>
   );

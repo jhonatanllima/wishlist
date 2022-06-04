@@ -24,7 +24,7 @@ export function Nav({ menuItems }: NavProps) {
                   {itemMenu.title}
 
                   <span>
-                    <p>{favorites.length}</p>
+                    <p>{favorites?.length}</p>
                   </span>
                 </a>
               </Link>

@@ -4,14 +4,17 @@ import { ProductCard } from '.';
 
 export default {
   title: 'ProductCard',
+  alt: 'produto de bebe',
+  price: 'R$ 4,00',
+  image: '/images/svg/illustration.svg',
   component: ProductCard,
 } as Meta;
 
-export const Basic: Story = (args) => (
+export const Product: Story = (args) => (
   <ProductCard
-    alt="produto de bebe"
-    title="produto de bebe"
-    price="R$ 4,00"
-    image="/images/svg/illustration.svg"
+    alt={args.title}
+    title={args.alt}
+    price={args.price}
+    image={args.image}
   />
 );

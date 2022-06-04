@@ -10,14 +10,15 @@ import { FavoriteButtonProps } from '~/types/components/FavoriteButton';
 export function FavoriteButton({ onClick, activeButton }: FavoriteButtonProps) {
   const { favoritesIds } = useFavorites();
 
+  function handleColorButton() {
+    return favoritesIds?.includes(activeButton)
+      ? colors.red[500]
+      : colors.white;
+  }
+
   return (
-    <S.Button onClick={onClick}>
-      <FaHeart
-        size={24}
-        color={
-          favoritesIds.includes(activeButton) ? colors.red[500] : colors.white
-        }
-      />
+    <S.Button onClick={onClick} aria-label="Favoritar">
+      <FaHeart size={24} color={handleColorButton()} />
     </S.Button>
   );
 }
