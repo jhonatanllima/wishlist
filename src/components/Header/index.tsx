@@ -5,11 +5,11 @@ import { AiOutlineArrowLeft } from 'react-icons/ai';
 import { IoLocationSharp } from 'react-icons/io5';
 import { FaHeart, FaPhoneAlt } from 'react-icons/fa';
 
-import { Nav } from '~/components';
+import { Nav } from '../index';
+import { HeaderProps } from '../../types/components/Header';
 
 import * as S from './styles';
-
-import { HeaderProps } from '~/types/components/Header';
+import { colors } from '../../styles/colors';
 
 export function Header({ logo }: HeaderProps) {
   const menuItems = [
@@ -35,8 +35,8 @@ export function Header({ logo }: HeaderProps) {
       <S.Wrapper>
         <S.WrapperLogo>
           <Link href="/">
-            <a>
-              <AiOutlineArrowLeft size={24} color="#fff" />
+            <a aria-label="Seta para a esquerda">
+              <AiOutlineArrowLeft size={24} color={colors.white} />
             </a>
           </Link>
 
