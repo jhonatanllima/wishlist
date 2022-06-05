@@ -1,7 +1,6 @@
 import Link from 'next/link';
 
 import * as S from './styles';
-
 import { BreadCrumbProps } from '../../types/components/BreadCrumb';
 
 export function BreadCrumb({ breadCrumbItems }: BreadCrumbProps) {

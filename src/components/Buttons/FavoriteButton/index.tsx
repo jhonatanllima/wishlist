@@ -1,11 +1,10 @@
 import { FaHeart } from 'react-icons/fa';
 
-import { useFavorites } from '../../../hooks/Favorites';
+import { FavoriteButtonProps } from '~/types/components/FavoriteButton';
 
+import { useFavorites } from '../../../hooks/Favorites';
 import * as S from './styles';
 import { colors } from '../../../styles/colors';
-
-import { FavoriteButtonProps } from '~/types/components/FavoriteButton';
 
 export function FavoriteButton({ onClick, activeButton }: FavoriteButtonProps) {
   const { favoritesIds } = useFavorites();

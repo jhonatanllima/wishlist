@@ -3,19 +3,17 @@ import { GetStaticProps } from 'next';
 
 import { ProductProps } from '~/types/services/getProducts';
 import { getProducts } from '~/services/functions/getProducts';
-
 import { useSearch } from '~/hooks/Search';
 import { useFavorites } from '~/hooks/Favorites';
-
 import { normalizeFilterOfSearch } from '~/utils/normalizeFilterOfSearch';
-
 import { BreadCrumb, ProductCard, FavoriteButton } from '~/components';
-
 import * as S from '~/styles/pages/home.styles';
 
 interface HomeProductsProps {
   products: ProductProps[];
 }
+
+const TWENTY_FOUR_HOURS_IN_MILLISECONDS = 60 * 60 * 24;
 
 export default function Home(props: HomeProductsProps) {
   const { search } = useSearch();
@@ -81,6 +79,6 @@ export const getStaticProps: GetStaticProps = async () => {
 
   return {
     props: { products },
-    revalidate: 60 * 60 * 24, // 24 hours
+    revalidate: TWENTY_FOUR_HOURS_IN_MILLISECONDS,
   };
 };
