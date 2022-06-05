@@ -1,13 +1,10 @@
 import Head from 'next/head';
 import type { AppProps } from 'next/app';
-
 import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 import { AppProvider } from '~/hooks';
-
 import { Header } from '~/components';
-
-import 'react-toastify/dist/ReactToastify.css';
 import GlobalStyles from '~/styles/GlobalStyles';
 
 function App({ Component, pageProps }: AppProps) {

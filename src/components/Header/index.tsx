@@ -1,13 +1,10 @@
 import Link from 'next/link';
-
 import { AiOutlineArrowLeft } from 'react-icons/ai';
-
 import { IoLocationSharp } from 'react-icons/io5';
 import { FaHeart, FaPhoneAlt } from 'react-icons/fa';
 
 import { Nav } from '../index';
 import { HeaderProps } from '../../types/components/Header';
-
 import * as S from './styles';
 import { colors } from '../../styles/colors';
 

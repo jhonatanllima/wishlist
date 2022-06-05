@@ -1,7 +1,6 @@
 import Image from 'next/image';
 
 import * as S from './styles';
-
 import { ProductCardProps } from '../../../types/components/ProductCard';
 
 export function ProductCard({

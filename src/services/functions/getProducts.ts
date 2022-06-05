@@ -1,5 +1,4 @@
 import { api } from '~/services/config';
-
 import { ProductProps } from '~/types/services/getProducts';
 
 export async function getProducts(): Promise<ProductProps[]> {
