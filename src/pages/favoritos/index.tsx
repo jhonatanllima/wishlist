@@ -54,6 +54,7 @@ export default function Favorites() {
           {productsFavorite.map((favorite) => (
             <ProductCard
               key={favorite.id}
+              alt={favorite.title}
               price={favorite.price}
               title={favorite.title}
               image="/images/svg/illustration.svg"
@@ -65,7 +66,7 @@ export default function Favorites() {
             />
           ))}
 
-          {!favorites.length && (
+          {!favorites?.length && (
             <S.WrapperErrors>
               <h2>Nenhum item ainda em sua lista de desejo! {':('}</h2>
 

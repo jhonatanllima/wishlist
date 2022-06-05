@@ -1,17 +1,189 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`< Nav />  should render the heading 1`] = `
+exports[`<Nav />  should render the correctly 1`] = `
 .c0 {
   width: 100%;
   height: 100%;
-  background: blue;
 }
 
-<nav
-  class="c0"
->
-  <h1>
-    Nav
-  </h1>
-</nav>
+.c0 input {
+  width: 100%;
+  border: none;
+  padding: 1rem;
+  height: 3.5rem;
+  border-radius: 2px;
+  margin-top: 1.5rem;
+}
+
+.c0 a:hover {
+  cursor: pointer;
+}
+
+.c1 {
+  width: 100%;
+  height: auto;
+  margin-top: 1rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  list-style: none;
+  font-weight: bold;
+  font-size: 1.6rem;
+  color: #FFFFFF;
+}
+
+.c1 a {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-style: none;
+  font-size: 1.6rem;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: #FFFFFF;
+}
+
+.c1 a svg {
+  margin-right: 0.5rem;
+}
+
+.c1 a span {
+  top: -1rem;
+  left: -1rem;
+  position: absolute;
+  width: 1.6rem;
+  height: 1.6rem;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 0.9rem;
+  background: #FF3232;
+}
+
+.c1 a span p {
+  margin-left: -0.1rem;
+}
+
+.c1 li {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c1 li svg {
+  margin-right: 0.5rem;
+}
+
+@media (max-width:767px) {
+  .c1 {
+    gap: 1rem;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-align-items: flex-end;
+    -webkit-box-align: flex-end;
+    -ms-flex-align: flex-end;
+    align-items: flex-end;
+  }
+}
+
+<div>
+  <nav
+    class="c0"
+  >
+    <ul
+      class="c1"
+    >
+      <li>
+        <svg
+          fill="currentColor"
+          height="1em"
+          stroke="currentColor"
+          stroke-width="0"
+          viewBox="0 0 512 512"
+          width="1em"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M256 32C167.67 32 96 96.51 96 176c0 128 160 304 160 304s160-176 160-304c0-79.49-71.67-144-160-144zm0 224a64 64 0 1164-64 64.07 64.07 0 01-64 64z"
+          />
+        </svg>
+        Cidade: São Paulo
+      </li>
+      <li>
+        <svg
+          fill="currentColor"
+          height="1em"
+          stroke="currentColor"
+          stroke-width="0"
+          viewBox="0 0 512 512"
+          width="1em"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M497.39 361.8l-112-48a24 24 0 0 0-28 6.9l-49.6 60.6A370.66 370.66 0 0 1 130.6 204.11l60.6-49.6a23.94 23.94 0 0 0 6.9-28l-48-112A24.16 24.16 0 0 0 122.6.61l-104 24A24 24 0 0 0 0 48c0 256.5 207.9 464 464 464a24 24 0 0 0 23.4-18.6l24-104a24.29 24.29 0 0 0-14.01-27.6z"
+          />
+        </svg>
+        Central de Atendimento
+      </li>
+      <a
+        href="/favoritos"
+      >
+        <svg
+          fill="currentColor"
+          height="1em"
+          stroke="currentColor"
+          stroke-width="0"
+          viewBox="0 0 512 512"
+          width="1em"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M462.3 62.6C407.5 15.9 326 24.3 275.7 76.2L256 96.5l-19.7-20.3C186.1 24.3 104.5 15.9 49.7 62.6c-62.8 53.6-66.1 149.8-9.9 207.9l193.5 199.8c12.5 12.9 32.8 12.9 45.3 0l193.5-199.8c56.3-58.1 53-154.3-9.8-207.9z"
+          />
+        </svg>
+        Lista de Desejos
+        <span>
+          <p />
+        </span>
+      </a>
+    </ul>
+    <input
+      aria-label="Campo de busca"
+      placeholder="Buscar"
+      type="text"
+    />
+  </nav>
+</div>
 `;

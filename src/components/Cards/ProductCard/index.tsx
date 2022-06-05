@@ -2,9 +2,10 @@ import Image from 'next/image';
 
 import * as S from './styles';
 
-import { ProductCardProps } from '~/types/components/ProductCard';
+import { ProductCardProps } from '../../../types/components/ProductCard';
 
 export function ProductCard({
+  alt,
   image,
   title,
   price,
@@ -19,8 +20,15 @@ export function ProductCard({
         <S.WrapperButtonRight>{buttonRight}</S.WrapperButtonRight>
       )}
 
-      <Image src={image} width={300} height={300} />
+      <Image
+        alt={alt}
+        width={300}
+        height={300}
+        src={image || '/images/svg/illustration.svg'}
+      />
+
       <strong>{title}</strong>
+
       <span>{price}</span>
     </S.Container>
   );

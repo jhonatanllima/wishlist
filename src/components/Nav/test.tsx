@@ -1,38 +1,51 @@
-import { render, screen } from '@testing-library/react';
+import { screen } from '@testing-library/react';
 
-import { FaHeart, FaPhoneAlt } from 'react-icons/fa';
 import { IoLocationSharp } from 'react-icons/io5';
+import { FaHeart, FaPhoneAlt } from 'react-icons/fa';
+
+import { renderWithTheme } from '~/utils/tests/helpers';
 
 import { Nav } from '.';
 
-describe('< Nav /> ', () => {
-  const menuItems = [
-    {
-      title: 'Cidade: São Paulo',
-      icon: <IoLocationSharp />,
-    },
+const menuItems = [
+  {
+    title: 'Cidade: São Paulo',
+    icon: <IoLocationSharp />,
+  },
+  {
+    title: 'Central de Atendimento',
+    icon: <FaPhoneAlt />,
+  },
+  {
+    title: 'Lista de Desejos',
+    icon: <FaHeart />,
+    link: '/favoritos',
+  },
+];
 
-    {
-      title: 'Central de Atendimento',
-      icon: <FaPhoneAlt />,
-    },
+// type TestElement = Document | Element | Window | Node | Function;
 
-    {
-      title: 'Lista de Desejos',
-      icon: <FaHeart />,
-      link: '/favoritos',
-    },
-  ];
+// function hasInputValue(e: TestElement, inputValue: string) {
+//   return screen.getByDisplayValue(inputValue) === e;
+// }
 
-  it('should render the heading', () => {
-    const { container } = render(<Nav menuItems={menuItems} />);
+describe('<Nav /> ', () => {
+  it('should render the correctly', () => {
+    const { container } = renderWithTheme(<Nav menuItems={menuItems} />);
 
+    expect(screen.getByText(/Cidade: São Paulo/i)).toBeInTheDocument();
+    expect(screen.getByText(/Central de atendimento/i)).toBeInTheDocument();
     expect(
-      screen.getByRole('heading', {
-        name: /Nav/i,
-      })
+      screen.getByRole('link', { name: /lista de desejos/i })
     ).toBeInTheDocument();
 
-    expect(container.firstChild).toMatchSnapshot();
+    expect(screen.getByPlaceholderText('Buscar')).toBeInTheDocument();
+
+    expect(screen.getByLabelText('Campo de busca')).toBeInTheDocument();
+
+    // fireEvent.change(input, { target: { value: '123' } });
+    // expect(hasInputValue(input, '123')).toBe(true);
+
+    expect(container).toMatchSnapshot();
   });
 });

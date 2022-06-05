@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { colors } from '~/styles/colors';
+import { colors } from '../../../styles/colors';
 
 export const Container = styled.div`
   position: relative;
@@ -15,6 +15,7 @@ export const Container = styled.div`
   align-items: center;
   flex-direction: column;
 
+  word-break: break-all;
   background: ${colors.white};
   box-shadow: 0px 1px 5px 0px rgba(143, 143, 143, 0.6);
   -moz-box-shadow: 0px 1px 5px 0px rgba(143, 143, 143, 0.6);
@@ -36,6 +37,7 @@ export const Container = styled.div`
 
     font-weight: bold;
     font-size: 1.3rem;
+    text-align: center;
     color: ${colors.yellow[500]};
   }
 `;

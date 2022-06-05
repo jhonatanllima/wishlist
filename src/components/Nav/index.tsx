@@ -1,8 +1,8 @@
 import Link from 'next/link';
 import { Fragment } from 'react';
 
-import { useSearch } from '~/hooks/Search';
-import { useFavorites } from '~/hooks/Favorites';
+import { useSearch } from '../../hooks/Search';
+import { useFavorites } from '../../hooks/Favorites';
 
 import * as S from './styles';
 
@@ -24,7 +24,7 @@ export function Nav({ menuItems }: NavProps) {
                   {itemMenu.title}
 
                   <span>
-                    <p>{favorites.length}</p>
+                    <p>{favorites?.length}</p>
                   </span>
                 </a>
               </Link>
@@ -41,6 +41,7 @@ export function Nav({ menuItems }: NavProps) {
       <input
         type="text"
         placeholder="Buscar"
+        aria-label="Campo de busca"
         onChange={(e) => setSearch(e.target.value)}
       />
     </S.Container>

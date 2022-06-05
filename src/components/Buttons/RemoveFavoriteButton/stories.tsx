@@ -7,4 +7,4 @@ export default {
   component: RemoveFavoriteButton,
 } as Meta;
 
-export const Basic: Story = (args) => <RemoveFavoriteButton />;
+export const Default: Story = (args) => <RemoveFavoriteButton />;
