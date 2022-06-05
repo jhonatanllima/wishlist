@@ -28,4 +28,4 @@ const menuItems = [
   },
 ];
 
-export const Basic: Story = () => <Nav menuItems={menuItems} />;
+export const Default: Story = () => <Nav menuItems={menuItems} />;

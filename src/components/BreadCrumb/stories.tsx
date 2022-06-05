@@ -20,6 +20,6 @@ const breadCrumbItems = [
   },
 ];
 
-export const Basic: Story = (args) => (
+export const Default: Story = (args) => (
   <BreadCrumb breadCrumbItems={breadCrumbItems} />
 );

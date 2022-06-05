@@ -1,4 +1,4 @@
 export interface FavoriteButtonProps {
-  activeButton: number;
+  activeButton?: number;
   onClick?: () => void;
 }

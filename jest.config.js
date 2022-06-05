@@ -10,6 +10,7 @@ module.exports = {
     '!src/**/stories.tsx',
     '!src/*/.stories.tsx',
     '!src/**/index.ts',
+    '!src/hooks/**',
   ],
   modulePaths: ['<rootDir>/src/'],
   setupFilesAfterEnv: ['<rootDir>/.jest/setup.ts'],

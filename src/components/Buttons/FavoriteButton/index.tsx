@@ -11,7 +11,7 @@ export function FavoriteButton({ onClick, activeButton }: FavoriteButtonProps) {
   const { favoritesIds } = useFavorites();
 
   function handleColorButton() {
-    return favoritesIds?.includes(activeButton)
+    return favoritesIds?.includes(activeButton || 0)
       ? colors.red[500]
       : colors.white;
   }

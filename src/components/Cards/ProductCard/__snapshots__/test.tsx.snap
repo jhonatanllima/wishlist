@@ -42,6 +42,7 @@ exports[`<ProductCard />  should render default component 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
+  word-break: break-all;
   background: #FFFFFF;
   box-shadow: 0px 1px 5px 0px rgba(143,143,143,0.6);
   -moz-box-shadow: 0px 1px 5px 0px rgba(143,143,143,0.6);
@@ -62,6 +63,7 @@ exports[`<ProductCard />  should render default component 1`] = `
   margin-top: 2.5rem;
   font-weight: bold;
   font-size: 1.3rem;
+  text-align: center;
   color: #DAB600;
 }
 
@@ -202,6 +204,7 @@ exports[`<ProductCard />  should render with both buttons 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
+  word-break: break-all;
   background: #FFFFFF;
   box-shadow: 0px 1px 5px 0px rgba(143,143,143,0.6);
   -moz-box-shadow: 0px 1px 5px 0px rgba(143,143,143,0.6);
@@ -222,6 +225,7 @@ exports[`<ProductCard />  should render with both buttons 1`] = `
   margin-top: 2.5rem;
   font-weight: bold;
   font-size: 1.3rem;
+  text-align: center;
   color: #DAB600;
 }
 
@@ -370,6 +374,7 @@ exports[`<ProductCard />  should render with favorite button 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
+  word-break: break-all;
   background: #FFFFFF;
   box-shadow: 0px 1px 5px 0px rgba(143,143,143,0.6);
   -moz-box-shadow: 0px 1px 5px 0px rgba(143,143,143,0.6);
@@ -390,6 +395,7 @@ exports[`<ProductCard />  should render with favorite button 1`] = `
   margin-top: 2.5rem;
   font-weight: bold;
   font-size: 1.3rem;
+  text-align: center;
   color: #DAB600;
 }
 
@@ -502,6 +508,7 @@ exports[`<ProductCard />  should render with unfavorite button 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
+  word-break: break-all;
   background: #FFFFFF;
   box-shadow: 0px 1px 5px 0px rgba(143,143,143,0.6);
   -moz-box-shadow: 0px 1px 5px 0px rgba(143,143,143,0.6);
@@ -522,6 +529,7 @@ exports[`<ProductCard />  should render with unfavorite button 1`] = `
   margin-top: 2.5rem;
   font-weight: bold;
   font-size: 1.3rem;
+  text-align: center;
   color: #DAB600;
 }
 

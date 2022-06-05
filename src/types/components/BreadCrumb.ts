@@ -1,6 +1,6 @@
 type breadCrumbItems = {
-  link: string;
-  title: string;
+  link?: string;
+  title?: string;
   separator?: string;
 };
 
