@@ -35,11 +35,15 @@ export const Wrapper = styled.div`
 `;
 
 export const WrapperLogo = styled.div`
+  width: 100%;
+  max-width: 20rem;
+  margin-top: -3rem;
+
   gap: 0.5rem;
   display: flex;
   flex-direction: column;
 
-  margin-top: -3rem;
+  word-break: break-all;
 
   a {
     svg {

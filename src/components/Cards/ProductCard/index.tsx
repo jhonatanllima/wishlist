@@ -20,7 +20,12 @@ export function ProductCard({
         <S.WrapperButtonRight>{buttonRight}</S.WrapperButtonRight>
       )}
 
-      <Image src={image} width={300} height={300} alt={alt} />
+      <Image
+        alt={alt}
+        width={300}
+        height={300}
+        src={image || '/images/svg/illustration.svg'}
+      />
 
       <strong>{title}</strong>
 

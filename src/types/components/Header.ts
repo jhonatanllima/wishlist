@@ -1,3 +1,3 @@
 export interface HeaderProps {
-  logo: string;
+  logo?: string;
 }
