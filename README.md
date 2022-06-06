@@ -1,4 +1,4 @@
-E<div>
+<div>
   <img src="https://img.shields.io/static/v1?label=Next&message=12.1.0&color=#009CA3%3CCOLOR%3E&style=plastic%3CSTYLE%3E&logo=react%3CLOGO%3E" alt="Version of the Next" />
 
   <img src="https://img.shields.io/static/v1?label=progress&message=99%&color=#009CA3%3CCOLOR%3E&style=plastic%3CSTYLE%3E&logo=react%3CLOGO%3E" />
