@@ -56,6 +56,7 @@ export default function Home(props: HomeProductsProps) {
               alt={product.title}
               price={product.price}
               title={product.title}
+              // image={product.image}
               image="/images/svg/illustration.svg"
               buttonLeft={
                 <FavoriteButton

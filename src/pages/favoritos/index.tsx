@@ -3,11 +3,8 @@ import { useEffect, useState } from 'react';
 
 import { useSearch } from '~/hooks/Search';
 import { useFavorites } from '~/hooks/Favorites';
-
 import { normalizeFilterOfSearch } from '~/utils/normalizeFilterOfSearch';
-
 import { BreadCrumb, ProductCard, RemoveFavoriteButton } from '~/components';
-
 import * as S from '~/styles/pages/favorites.styles';
 
 export default function Favorites() {
@@ -57,6 +54,7 @@ export default function Favorites() {
               alt={favorite.title}
               price={favorite.price}
               title={favorite.title}
+              // image={favorite.image}
               image="/images/svg/illustration.svg"
               buttonRight={
                 <RemoveFavoriteButton
