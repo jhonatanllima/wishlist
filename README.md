@@ -34,7 +34,7 @@
 
 ### Features
 
-- [x] Criar 2 tela (listagem dos produtos / listagem de favoritos/wishlist);
+- [x] Criar 2 telas (listagem dos produtos / listagem de favoritos/wishlist);
 - [x] Listar os produtos;
 - [x] Buscar por um ou mais produtos ou favoritos;
 - [x] Na home, poder favoritar os produtos adicionando-os na wishlist/favoritos;
@@ -44,34 +44,34 @@
 
 #### Outros
 
-- [x] Testes em todos componentes e nas principais funções do projeto.
-- [x] Storybook em todos componentes para visualização e testes de forma isolada.
-- [x] Adicionado botão de voltar caso o usuário não esteja na Home.
-- [x] Adicionado react toastify para notificar o usuário da remoção do produto da wishlist.
-- [x] Adicionado texto e link caso nao exista nenhum produto na wishlist/favoritos.
+- [x] Testes em todos componentes e nas principais funções do projeto;
+- [x] Storybook em todos componentes para visualização e testes de forma isolada;
+- [x] Adicionado botão de voltar caso o usuário não esteja na Home;
+- [x] Adicionado react toastify para notificar o usuário da remoção do produto da wishlist;
+- [x] Adicionado texto e link caso nao exista nenhum produto na wishlist/favoritos;
 - [x] Adicionado um span em vermelho e branco para mostrar a quantidade de produtos adicionados na wishlist/favoritos.
 
 ### Tecnologias
 
 As seguintes ferramentas foram usadas na construção do projeto:
 
-- [Next.js](https://nextjs.org/)
-- [React](https://pt-br.reactjs.org/)
-- [TypeScript](https://www.typescriptlang.org/)
+- [Next.js](https://nextjs.org/);
+- [React](https://pt-br.reactjs.org/);
+- [TypeScript](https://www.typescriptlang.org/).
 
 
 #### Auxiliares
 
-- [Jest](https://jestjs.io/)
-- [storybook](https://storybook.js.org/)
-- [Axios](https://github.com/axios/axios)
-- [Styled Components](https://styled-components.com/)
-- [React Toastify](https://www.npmjs.com/package/react-toastify)
+- [Jest](https://jestjs.io/);
+- [storybook](https://storybook.js.org/);
+- [Axios](https://github.com/axios/axios);
+- [Styled Components](https://styled-components.com/);
+- [React Toastify](https://www.npmjs.com/package/react-toastify).
 
 #### Padronização de código:
 
-- [ESLint](https://eslint.org/)
-- [Prettier](https://prettier.io/)
+- [ESLint](https://eslint.org/);
+- [Prettier](https://prettier.io/).
 
 ### Arquitetura
 
