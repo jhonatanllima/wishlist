@@ -1,4 +1,4 @@
-<div>
+E<div>
   <img src="https://img.shields.io/static/v1?label=Next&message=12.1.0&color=#009CA3%3CCOLOR%3E&style=plastic%3CSTYLE%3E&logo=react%3CLOGO%3E" alt="Version of the Next" />
 
   <img src="https://img.shields.io/static/v1?label=progress&message=99%&color=#009CA3%3CCOLOR%3E&style=plastic%3CSTYLE%3E&logo=react%3CLOGO%3E" />
@@ -32,7 +32,7 @@
 - [x] Listar os produtos;
 - [x] Buscar por um ou mais produtos ou favoritos;
 - [x] Na home, poder favoritar os produtos adicionando-os na wishlist/favoritos;
-- [x] Na wishlist, poder remover os produtos da wishlist.favoritos;
+- [x] Na wishlist, poder remover os produtos da wishlist/favoritos;
 - [x] A qualquer momento o cliente pode visualizar sua Wishlist completa, com todos os produtos que ele selecionou em uma única tela;
 - [x] Salvar os produtos em localStorage para que possa ser visualizado a qualquer momento pelo usuário.
 
