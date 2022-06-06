@@ -9,7 +9,7 @@
 <h1 align="center">WishList</h1>
 
 <p align="center">
-  Uma aplicação Web responsiva desenvolvida com <a href="https://nextjs.org/">create-next-app</a> que consulte a API disponibilizada pela empresa empresa <a href="https://github.com/luizalabs">Luiza Labs</a> onde exibe uma lista de produtos e podemos favoritar cada um deles.
+  Uma aplicação Web responsiva desenvolvida com <a href="https://nextjs.org/">create-next-app</a> que consulte a API disponibilizada pela empresa empresa <a href="https://github.com/luizalabs">Luiza Labs,</a> exibindo uma lista de produtos com a possibilidade de  selecionar (favoritar) cada um deles.
 </p>
 
 <p align="center">
@@ -141,9 +141,9 @@ ___
 
 
 ### Desafios
-<p> A Feature mais complexa, foi a manipulação dos produtos para salvar na wishlist/favoritos e guardar em localStorage. Utilizei <a href="https://pt-br.reactjs.org/">Context API</a> Onde possuo domínio. Geralmente uso cookie para gravar os dados, ma confesso que foi muito melhor utilizar localStorage.
+<p> A Feature mais complexa, foi a manipulação dos produtos para salvar na wishlist/favoritos e guardar em localStorage. Utilizei <a href="https://pt-br.reactjs.org/">Context API,</a> onde possuo domínio. Geralmente uso cookie para gravar os dados, mas confesso que foi muito melhor utilizar localStorage.
 
-Outro ponto foram os testes unitários e storybook, até esse projeto eu não tinha tido contato, conhecia apenas de forma teórica, apesar de não implementar os testes nos hooks consegui em todos componentes e nas principais funções.
+Outro ponto foram os testes unitários e storybook, até esse projeto, eu não tinha tido contato pois conhecia apenas de forma teórica, apesar de não implementar os testes nos hooks consegui em todos componentes e nas principais funções.
 </p>
 
 ---
