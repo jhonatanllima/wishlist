@@ -26,9 +26,11 @@
 	 Status: Entregue!
 </h4>
 
-<a align="center" href="https://wishlist-amber.vercel.app/">
-	 WishList
-</a>
+<h4 align="center">
+  <a  href="https://wishlist-amber.vercel.app/">
+    WishList
+  </a>
+</h4>
 
 ### Features
 
