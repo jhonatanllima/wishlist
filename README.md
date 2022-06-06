@@ -1,4 +1,4 @@
-E<div>
+<div>
   <img src="https://img.shields.io/static/v1?label=Next&message=12.1.0&color=#009CA3%3CCOLOR%3E&style=plastic%3CSTYLE%3E&logo=react%3CLOGO%3E" alt="Version of the Next" />
 
   <img src="https://img.shields.io/static/v1?label=progress&message=99%&color=#009CA3%3CCOLOR%3E&style=plastic%3CSTYLE%3E&logo=react%3CLOGO%3E" />
@@ -92,11 +92,11 @@ Além disto é bom ter um editor para trabalhar com o código como [VSCode](http
 
 ##### Clone este repositório
 ```bash
-git clone https://github.com/fernando-meira/goomer-frontend-challenge.git
+git clone https://github.com/jhonatanllima/wishlist.git
 ```
 ##### Acesse a pasta do projeto no terminal/cmd
 ```bash
-cd goomer-frontend-challenge
+cd wishlist
 ```
 ##### Instale as dependências com yarn ou npm
 ```bash
@@ -105,7 +105,7 @@ yarn
 ```
 ##### Execute a aplicação em modo de desenvolvimento
 ```bash
-yarn start
+yarn dev
 ```
 #### O servidor inciará na porta :3000 - acesse <http://localhost:3000>
 
@@ -119,6 +119,18 @@ yarn start
 ```bash
 yarn test
 ```
+___
+
+### Storybook
+
+![Terminado com testes](public/images/png/storybook.png)
+
+##### Execute o comando a seguir para rodar os testes unitários
+```bash
+yarn storybook
+```
+
+#### O servidor inciará na porta :6006 - acesse <http://localhost:6006/ >
 ___
 
 
