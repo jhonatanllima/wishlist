@@ -4,7 +4,7 @@
   <img src="https://img.shields.io/static/v1?label=progress&message=99%&color=#009CA3%3CCOLOR%3E&style=plastic%3CSTYLE%3E&logo=react%3CLOGO%3E" />
 </div>
 
-![Logo do Markdown](/images/png/luiza-labs.png)
+![Logo do Markdown](public/images/png/luiza-labs.png)
 
 <h1 align="center">WishList</h1>
 
@@ -113,7 +113,7 @@ yarn start
 
 ### Testes
 
-![Terminado com testes](/images/png/tests.png)
+![Terminado com testes](public/images/png/tests.png)
 
 ##### Execute o comando a seguir para rodar os testes unitários
 ```bash
