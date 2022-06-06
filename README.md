@@ -26,6 +26,12 @@
 	 Status: Entregue!
 </h4>
 
+<h4 align="center">
+  <a  href="https://wishlist-amber.vercel.app/">
+    WishList
+  </a>
+</h4>
+
 ### Features
 
 - [x] Criar 2 tela (listagem dos produtos / listagem de favoritos/wishlist);
