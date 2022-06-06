@@ -92,11 +92,11 @@ Além disto é bom ter um editor para trabalhar com o código como [VSCode](http
 
 ##### Clone este repositório
 ```bash
-git clone https://github.com/fernando-meira/goomer-frontend-challenge.git
+git clone https://github.com/jhonatanllima/wishlist.git
 ```
 ##### Acesse a pasta do projeto no terminal/cmd
 ```bash
-cd goomer-frontend-challenge
+cd wishlist
 ```
 ##### Instale as dependências com yarn ou npm
 ```bash
@@ -105,7 +105,7 @@ yarn
 ```
 ##### Execute a aplicação em modo de desenvolvimento
 ```bash
-yarn start
+yarn dev
 ```
 #### O servidor inciará na porta :3000 - acesse <http://localhost:3000>
 
