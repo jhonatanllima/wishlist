@@ -121,6 +121,18 @@ yarn test
 ```
 ___
 
+### Storybook
+
+![Terminado com testes](public/images/png/storybook.png)
+
+##### Execute o comando a seguir para rodar os testes unitários
+```bash
+yarn storybook
+```
+
+#### O servidor inciará na porta :6006 - acesse <http://localhost:6006/ >
+___
+
 
 ### Desafios
 <p> A Feature mais complexa, foi a manipulação dos produtos para salvar na wishlist/favoritos e guardar em localStorage. Utilizei <a href="https://pt-br.reactjs.org/">Context API</a> Onde possuo domínio. Geralmente uso cookie para gravar os dados, ma confesso que foi muito melhor utilizar localStorage.
