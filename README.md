@@ -131,7 +131,7 @@ ___
 
 ![Terminado com testes](public/images/png/storybook.png)
 
-##### Execute o comando a seguir para rodar os testes unitários
+##### Execute o comando a seguir para rodar o storybook
 ```bash
 yarn storybook
 ```
