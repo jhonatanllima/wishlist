@@ -88,7 +88,7 @@ src/
 Antes de começar, você vai precisar ter instalado em sua máquina as seguintes ferramentas:
 [Git](https://git-scm.com), [Node.js](https://nodejs.org/en/), [yarn](https://yarnpkg.com/) ou [npm](https://www.npmjs.com/package/npm).
 
-Além disto é bom ter um editor para trabalhar com o código como [VSCode](https://code.visualstudio.com/) [![Open in Visual Studio Code](https://open.vscode.dev/badges/open-in-vscode.svg)](https://open.vscode.dev/Naereen/badges)
+Além disto é bom ter um editor para trabalhar com o código como [VSCode](https://code.visualstudio.com/)
 
 ##### Clone este repositório
 ```bash
@@ -140,6 +140,8 @@ Na api, possuí muito mais informações do produto, então poderia ser criado m
 ---
 
 <p>Criado com as melhores práticas e tecnologias que conheço no momento e, sinceramente, farei desse "conheço no momento" meu eterno aprendizado!</p>
+
+<strong><a href="https://jhonatanlima.com.br/">Jhonatan Lima</a></strong>
 
 
 <p>Agradeço a <a href="https://github.com/luizalabs">Luiza Labs</a> pela oportunidade!</p>
